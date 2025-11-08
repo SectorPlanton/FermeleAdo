@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fermele ADO - Producător de lapte proaspăt și produse lactate naturale din Hunedoara. Brânzeturi tradiționale, iaurt natural și lapte de calitate superioară.">
+<meta name="keywords" content="fermele ado, lapte proaspăt hunedoara, brânză naturală, iaurt natural, produse lactate hunedoara, lapte bio">
+<meta name="author" content="Fermele ADO">
+<meta property="og:title" content="Fermele ADO - Produse Lactate Naturale din Hunedoara">
+<meta property="og:description" content="Lapte proaspăt, brânzeturi tradiționale și iaurt natural de calitate superioară din fermele proprii.">
+<meta property="og:image" content="https://i.ibb.co/XZk7SVZF/logoAdo.jpg">
+<meta property="og:type" content="website">
+<title>Fermele ADO - Produse Lactate Naturale din Hunedoara | Lapte Proaspăt, Brânză, Iaurt</title>
+<link rel="icon" href="https://i.ibb.co/XZk7SVZF/logoAdo.jpg" type="image/jpeg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root {
+  --primary: #2E7D32;
+  --primary-dark: #1B5E20;
+  --primary-light: #4CAF50;
+  --secondary: #FFA726;
+  --text-dark: #212121;
+  --text-light: #757575;
+  --bg-light: #F5F5F5;
+  --white: #FFFFFF;
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+  --shadow-hover: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar Sticky Premium */
+.navbar {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+}
+
+.navbar-brand img {
+  height: 60px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.navbar.scrolled .navbar-brand img {
+  height: 50px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-dark) !important;
+  margin: 0 10px;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 70%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+  background: rgba(46, 125, 50, 0.05);
+}
+
+/* Hero Section Premium */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.85) 0%, rgba(46, 125, 50, 0.7) 50%, rgba(76, 175, 80, 0.6) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white);
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+  animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+  animation: fadeInUp 1.2s ease;
+}
+
+.hero-content .btn {
+  animation: fadeInUp 1.4s ease;
+}
+
+.btn-hero {
+  background: var(--white);
+  color: var(--primary);
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  background: var(--primary);
+  color: var(--white);
+}
+
+.carousel-indicators {
+  bottom: 30px;
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid var(--white);
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background: var(--white);
+  transform: scale(1.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sections */
+section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
+/* About Section */
+#about {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-text {
+  padding: 30px;
+}
+
+.about-text h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-item {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-item i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.feature-item h4 {
+  font-size: 1.3rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.about-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Products Section */
+#products {
+  background: var(--white);
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.4s ease;
+  border: none;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(46, 125, 50, 0) 0%, rgba(46, 125, 50, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.product-overlay i {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* Locations Section */
+#locations {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--white);
+}
+
+#locations .section-title h2,
+#locations .section-title p {
+  color: var(--white);
+}
+
+.location-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  border: none;
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+  background: var(--white);
+}
+
+.location-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.location-card h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.location-card p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.location-card .btn-location {
+  background: var(--primary);
+  color: var(--white);
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.location-card .btn-location:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Testimonials Section */
+#testimonials {
+  background: var(--bg-light);
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: none;
+  height: 100%;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '\f10d';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 3rem;
+  color: var(--primary);
+  opacity: 0.1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.author-info h6 {
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 5px;
+}
+
+.rating {
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: var(--white);
+  position: relative;
+}
+
+#contact .section-title h2,
+#contact .section-title p {
+  color: var(--white);
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.contact-form .form-control {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form .btn-submit {
+  background: var(--primary);
+  color: var(--white);
+  padding: 15px 50px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-form .btn-submit:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  color: var(--white);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: var(--secondary);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.contact-item-content h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact-item-content p,
+.contact-item-content a {
+  font-size: 1.1rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.contact-item-content a:hover {
+  color: var(--secondary);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-links a {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--secondary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--white);
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-section h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.footer-section a:hover {
+  color: var(--secondary);
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 20px;
+  
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  section {
+    padding: 70px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .btn-hero {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form,
+  .contact-info {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .nav-link {
+    margin: 5px 0;
+  }
+  
+  .scroll-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid var(--bg-light);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading">
+  <div class="spinner"></div>
+</div>
+
+<!-- Navbar Sticky -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="https://i.ibb.co/XZk7SVZF/logoAdo.jpg" alt="Fermele ADO Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">Despre Noi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Produse</a></li>
+        <li class="nav-item"><a class="nav-link" href="#locations">Puncte de Vânzare</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoniale</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-slide active">
+    <img src="https://i.ibb.co/zh5f66Hy/fAdo.jpg" alt="Fermele ADO">
+  </div>
+  <div class="hero-slide">
+    <img src="https://i.ibb.co/67NkvDx9/fAdo2.jpg" alt="Fermele ADO Premium">
+  </div>
+  <div class="hero-slide">
+    <img src="https://i.ibb.co/0RC46jXH/fAdo3.jpg" alt="Produse Lactate ADO">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Fermele ADO</h1>
+    <p>Lapte și produse lactate proaspete din inima Hunedoarei</p>
+    <a href="#products" class="btn btn-hero">Descoperă Produsele</a>
+  </div>
+  <div class="carousel-indicators">
+    <button class="active" data-slide="0"></button>
+    <button data-slide="1"></button>
+    <button data-slide="2"></button>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <div class="section-bg" style="background-image: url('https://i.ibb.co/bjNJ0kqp/fAdo4.jpg');"></div>
+  <div class="container about-content">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Despre Noi</h2>
+      <p>Tradiție, calitate și pasiune pentru produse naturale</p>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="about-text">
+          <h3>Fermele ADO - Pasiunea pentru Calitate</h3>
+          <p>Fermele ADO sunt dedicate producerii de lapte proaspăt și produse lactate naturale, cu tradiție în județul Hunedoara. Punem accent pe calitate, sănătate și gust autentic.</p>
+          <p>Produsele noastre sunt obținute cu grijă, direct din fermele proprii, respectând cele mai bune standarde de igienă și calitate. Fiecare produs poartă amprenta dedicării noastre pentru excelență.</p>
+          <div class="about-features">
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fas fa-leaf"></i>
+              <h4>100% Natural</h4>
+              <p>Fără conservanți sau aditivi artificiali</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-certificate"></i>
+              <h4>Calitate Garantată</h4>
+              <p>Standarde înalte de producție</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-heart"></i>
+              <h4>Tradiție Locală</h4>
+              <p>Rețete tradiționale din Hunedoara</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="about-image">
+          <img src="https://i.ibb.co/bjNJ0kqp/fAdo4.jpg" alt="Ferma ADO Hunedoara">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Produsele Noastre</h2>
+      <p>Descoperă gama completă de produse lactate naturale</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="https://i.ibb.co/mVbRV361/cascaval.jpg" class="glightbox">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://i.ibb.co/mVbRV361/cascaval.jpg" alt="Cașcaval ADO">
+              <div class="product-badge">Premium</div>
+              <div class="product-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Cașcaval Premium</h5>
+              <p>Cașcaval maturat cu gust intens și textură perfectă, preparat după rețete tradiționale.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://i.ibb.co/cKyN0YvJ/cascaval2.jpg" class="glightbox">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://i.ibb.co/cKyN0YvJ/cascaval2.jpg" alt="Cașcaval Tânăr ADO">
+              <div class="product-badge">Nou</div>
+              <div class="product-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Cașcaval Tânăr</h5>
+              <p>Cașcaval proaspăt cu gust delicat, perfect pentru sandvișuri și salate.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://i.ibb.co/p65HSj7m/cos1.jpg" class="glightbox">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://i.ibb.co/p65HSj7m/cos1.jpg" alt="Coș Cadou ADO">
+              <div class="product-badge">Special</div>
+              <div class="product-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Coș Cadou Premium</h5>
+              <p>Selecție exclusivă de produse lactate în coș cadou elegant, ideal pentru ocazii speciale.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://i.ibb.co/RT8rk0Cd/cosAdo2.jpg" class="glightbox">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://i.ibb.co/RT8rk0Cd/cosAdo2.jpg" alt="Coș ADO Tradițional">
+              <div class="product-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Coș Tradițional</h5>
+              <p>Asortiment variat de brânzeturi și lactate din rețete tradiționale hunedorene.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <a href="https://i.ibb.co/zhC4W37y/premium-Ado.jpg" class="glightbox">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://i.ibb.co/zhC4W37y/premium-Ado.jpg" alt="Produse Premium ADO">
+              <div class="product-badge">Exclusiv</div>
+              <div class="product-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Gama Premium</h5>
+              <p>Selecție exclusivă de produse lactate premium pentru cunoscători.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <a href="https://i.ibb.co/zh5f66Hy/fAdo.jpg" class="glightbox">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://i.ibb.co/0RC46jXH/fAdo3.jpg" alt="Lapte Proaspăt ADO">
+              <div class="product-badge">Zilnic</div>
+              <div class="product-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Lapte Proaspăt</h5>
+              <p>Lapte integral, natural și sănătos, culese și procesat zilnic din fermele proprii.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Locations Section -->
+<section id="locations">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Puncte de Vânzare</h2>
+      <p>Ne găsești în următoarele locații din Hunedoara</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="location-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h5>Hunedoara - Gară</h5>
+          <p><i class="fas fa-road"></i> Blvd. Traian nr. 3</p>
+          <p><i class="fas fa-clock"></i> L-V: 08:00 - 20:00<br>S-D: 08:00 - 18:00</p>
+          <a href="https://www.google.com/maps/search/Blvd.+Traian+nr.+3+Hunedoara" target="_blank" class="btn btn-location">
+            <i class="fas fa-directions"></i> Indicații
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="location-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h5>Hunedoara - Aleea Dacilor</h5>
+          <p><i class="fas fa-road"></i> Nr. 6A (Magazin ADO Sanitas)</p>
+          <p><i class="fas fa-clock"></i> L-V: 08:00 - 20:00<br>S-D: 08:00 - 18:00</p>
+          <a href="https://www.google.com/maps/search/Aleea+Dacilor+6A+Hunedoara" target="_blank" class="btn btn-location">
+            <i class="fas fa-directions"></i> Indicații
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="location-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h5>Deva</h5>
+          <p><i class="fas fa-road"></i> Blvd. Dacia</p>
+          <p><i class="fas fa-clock"></i> L-V: 08:00 - 20:00<br>S-D: 08:00 - 18:00</p>
+          <a href="https://www.google.com/maps/search/Blvd.+Dacia+Deva" target="_blank" class="btn btn-location">
+            <i class="fas fa-directions"></i> Indicații
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+  <div class="section-bg" style="background-image: url('https://i.ibb.co/67NkvDx9/fAdo2.jpg');"></div>
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Ce Spun Clienții Noștri</h2>
+      <p>Testimoniale reale de la clienți mulțumiți</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Produsele Fermele ADO sunt cele mai bune pe care le-am gustat! Laptele este proaspăt și cremos, exact cum îmi amintesc din copilărie. Calitate excepțională!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MP</div>
+            <div class="author-info">
+              <h6>Maria Popescu</h6>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Brânza lor are un gust autentic, exact ca în copilărie. Se simte că este făcută cu dragoste și cu ingrediente naturale. Recomand cu drag tuturor!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ID</div>
+            <div class="author-info">
+              <h6>Ion Dumitrescu</h6>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Iaurtul lor este natural și foarte gustos. Copiii mei îl adoră! Sunt fericită că am găsit produse lactate de calitate pentru familia mea. Mulțumim, Fermele ADO!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div class="author-info">
+              <h6>Ana Mureșan</h6>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Contactează-ne</h2>
+      <p>Suntem aici să răspundem întrebărilor tale</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6" data-aos="fade-right">
+        <form class="contact-form" action="#" method="post">
+          <input type="text" class="form-control" name="name" placeholder="Numele tău *" required>
+          <input type="email" class="form-control" name="email" placeholder="Email-ul tău *" required>
+          <input type="tel" class="form-control" name="phone" placeholder="Telefon">
+          <input type="text" class="form-control" name="subject" placeholder="Subiect *" required>
+          <textarea class="form-control" name="message" placeholder="Mesajul tău *" required></textarea>
+          <button type="submit" class="btn btn-submit">
+            <i class="fas fa-paper-plane"></i> Trimite Mesajul
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="contact-item-content">
+              <h5>Telefon</h5>
+              <p><a href="tel:+40734779412">0734 779 412</a></p>
+              <p><a href="tel:+40725722472">0725 722 472</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-item-content">
+              <h5>Adresă</h5>
+              <p>Județul Hunedoara, România</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div class="contact-item-content">
+              <h5>Email</h5>
+              <p><a href="mailto:contact@fermeleado.ro">contact@fermeleado.ro</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div class="contact-item-content">
+              <h5>Program</h5>
+              <p>Luni - Vineri: 08:00 - 20:00</p>
+              <p>Sâmbătă - Duminică: 08:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/fermeleado/?locale=ro_RO" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="https://i.ibb.co/XZk7SVZF/logoAdo.jpg" alt="Fermele ADO Logo" class="footer-logo">
+        <p>Fermele ADO - Producător de lapte proaspăt și produse lactate naturale din Hunedoara. Calitate, tradiție și pasiune în fiecare produs.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Link-uri Rapide</h4>
+        <p><a href="#home">Acasă</a></p>
+        <p><a href="#about">Despre Noi</a></p>
+        <p><a href="#products">Produse</a></p>
+        <p><a href="#locations">Puncte de Vânzare</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> 0734 779 412</p>
+        <p><i class="fas fa-phone"></i> 0725 722 472</p>
+        <p><i class="fas fa-envelope"></i> contact@fermeleado.ro</p>
+        <p><i class="fas fa-map-marker-alt"></i> Hunedoara, România</p>
+      </div>
+      <div class="footer-section">
+        <h4>Program</h4>
+        <p>Luni - Vineri<br>08:00 - 20:00</p>
+        <p>Sâmbătă - Duminică<br>08:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fermele ADO. Toate drepturile rezervate.</p>
+      <p>Dezvoltat cu ❤️ de Andrei</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-top" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+  offset: 100
+});
+
+// Initialize GLightbox
+const lightbox = GLightbox({
+  selector: '.glightbox',
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: true
+});
+
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelector('.loading').classList.add('hide');
+  }, 1000);
+});
+
+// Navbar Scroll Effect
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  
+  lastScroll = currentScroll;
+});
+
+// Active Nav Link on Scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', function() {
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= (sectionTop - 200)) {
+      current = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').slice(1) === current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Smooth Scroll for Nav Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
+      });
+      
+      // Close mobile menu if open
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    }
+  });
+});
+
+// Hero Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const indicators = document.querySelectorAll('.carousel-indicators button');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  indicators.forEach(indicator => indicator.classList.remove('active'));
+  
+  slides[index].classList.add('active');
+  indicators[index].classList.add('active');
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Manual indicator controls
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', function() {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('active');
+  } else {
+    scrollTopBtn.classList.remove('active');
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Form Submission (example - customize based on your backend)
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Mulțumim pentru mesaj! Vă vom contacta în curând.');
+    this.reset();
+  });
+}
+
+// Performance: Lazy Loading for Images
+if ('IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src || img.src;
+        img.classList.add('loaded');
+        observer.unobserve(img);
+      }
+    });
+  });
+  
+  document.querySelectorAll('img').forEach(img => {
+    imageObserver.observe(img);
+  });
+}
+</script>
+
+</body>
+</html>
